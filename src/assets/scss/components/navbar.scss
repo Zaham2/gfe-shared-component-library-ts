@@ -1,0 +1,72 @@
+@use '../shared/colors.scss' as *;
+
+@media (min-width: 768px) {
+    .navbar-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $white;
+        height: 100%;
+
+        & ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 16px;
+            padding-right: 20%;
+
+            & li {
+                padding-right: 12px;
+                color: $gray;
+            }
+        }
+
+        & .navbar-buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+        }
+
+        & .navbar-item {
+            cursor: pointer;
+        }
+
+        & .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+        }
+
+        & svg {
+            cursor: pointer;
+            min-width: 100px;
+        }
+
+        & .hamburger-icon {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        & ul, .navbar-buttons {
+            display: none;
+        }
+
+        & .hamburger-icon {
+            display: block;
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

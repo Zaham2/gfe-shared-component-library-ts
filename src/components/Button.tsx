@@ -74,7 +74,7 @@ const Button = (props: Props) => {
         onClick={handleOnClick}
         onMouseEnter={handleOnMouseEnter}
         onMouseLeave={handleOnMouseLeave}
-        className={`base-btn btn-state-${btnState} btn-variant-${variant} btn-${size} btn-icon-${icons} ${isFocused ? 'btn-state-focus' : ''}`}
+        className={`base-btn ${btnState} btn-variant-${variant} btn-${size} btn-icon-${icons} ${isFocused ? 'btn-state-focus' : ''}`}
       >
         {props.children}
       </button>

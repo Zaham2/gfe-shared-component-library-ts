@@ -144,25 +144,92 @@
     background-color: #{$indigo};
     color: #{$white};
 
-    
+    &:focus {
+        background-color: #{$white};
+        color: #{$indigo};
+    }
+
+    &:hover {
+        background-color: #{$lightblue};
+        color: #{$black};
+    }
+
+    &:active {
+        background-color: #{$red};
+    }
 }
 
 .btn-variant-secondary {
     background-color: #{$white};
     color: #{$black};
+
+    &:focus {
+        background-color: #{$indigo};
+        color: #{$black};
+    }
+
+    &:hover {
+        background-color: #{$lightblue};
+        color: #{$black};
+    }
+
+    &:active {
+        background-color: #{$red};
+    }
 }
 
 .btn-variant-tertiary {
     background-color: $white;
     color: #{$indigo};
+
+    &:focus {
+        background-color: #{$white};
+        color: #{$indigo};
+    }
+
+    &:hover {
+        background-color: #{$lightblue};
+        color: #{$black};
+    }
+
+    &:active {
+        background-color: #{$red};
+    }
 }
 
 .btn-variant-destructive {
     background-color: #{$red};
     color: #{$white};
+
+    &:focus {
+        color: #{$black};
+    }
+
+    &:hover {
+        background-color: #{$lightblue};
+        color: #{$black};
+    }
+
+    &:active {
+        color: #{$black}
+    }
 }
 
 .btn-variant-link {
     background-color: #{$white};
     color: #{$indigo};
+
+    &:focus {
+        background-color: #{$white};
+        color: #{$indigo};
+    }
+
+    &:hover {
+        background-color: #{$white};
+        color: #{$black};
+    }
+
+    &:active {
+        background-color: #{$red};
+    }
 }
