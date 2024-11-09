@@ -1,0 +1,168 @@
+@use '../shared/colors.scss' as *;
+
+.base-btn {
+    padding: 5px 20px;
+    border-radius: 4px;
+    width: 120px;
+}
+
+.btn-icon-left {
+    display: inline-flex;
+    gap: 8px;
+}
+
+.btn-icon-right {
+    display: inline-flex;
+    gap: 8px;
+}
+
+.btn-icon-both-sides {
+    display: inline-flex;
+    gap: 8px;
+}
+
+.btn-icon-none {}
+
+.btn-size-medium {
+    size: 16px;
+    line-height: 24px;
+}
+
+.btn-size-large {
+    size: 18px;
+    line-height: 28px;
+}
+
+.btn-size-x-large {
+    size: 20px;
+    line-height: 28px;
+}
+
+.btn-size-two-x-large {
+    size: 24px;
+    line-height: 32px;
+}
+
+
+.btn-state-primary {
+    background-color: #{$indigo};
+    color: #{$white};
+
+    &:focus {
+        background-color: #{$white};
+        color: #{$indigo};
+    }
+
+    &:hover {
+        background-color: #{$lightblue};
+        color: #{$black};
+    }
+
+    &:active {
+        background-color: #{$red};
+    }
+}
+
+.btn-state-secondary {
+    background-color: #{$white};
+    color: #{$indigo};
+
+    &:focus {
+        background-color: #{$indigo};
+        color: #{$black};
+    }
+
+    &:hover {
+        background-color: #{$lightblue};
+        color: #{$black};
+    }
+
+    &:active {
+        background-color: #{$red};
+    }
+}
+
+.btn-state-tertiary {
+    background-color: #{$indigo};
+    color: #{$white};
+
+    &:focus {
+        background-color: #{$white};
+        color: #{$indigo};
+    }
+
+    &:hover {
+        background-color: #{$lightblue};
+        color: #{$black};
+    }
+
+    &:active {
+        background-color: #{$red};
+    }
+}
+
+.btn-state-link {
+    border: none;
+    width: auto;
+    background-color: #{$white};
+    color: #{$lightblue};
+
+    &:focus {
+        background-color: #{$white};
+        color: #{$indigo};
+    }
+
+    &:hover {
+        background-color: #{$white};
+        color: #{$black};
+    }
+
+    &:active {
+        background-color: #{$red};
+    }
+}
+
+.btn-state-destructive {
+    background-color: #{$red};
+    color: #{$white};
+
+    &:focus {
+        color: #{$black};
+    }
+
+    &:hover {
+        background-color: #{$lightblue};
+        color: #{$black};
+    }
+
+    &:active {
+        color: #{$black}
+    }
+}
+
+.btn-variant-primary {
+    background-color: #{$indigo};
+    color: #{$white};
+
+    
+}
+
+.btn-variant-secondary {
+    background-color: #{$white};
+    color: #{$black};
+}
+
+.btn-variant-tertiary {
+    background-color: $white;
+    color: #{$indigo};
+}
+
+.btn-variant-destructive {
+    background-color: #{$red};
+    color: #{$white};
+}
+
+.btn-variant-link {
+    background-color: #{$white};
+    color: #{$indigo};
+}

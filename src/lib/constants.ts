@@ -1,21 +1,4 @@
 // --------------------
-// BADGE
-// --------------------
-export const LABEL_COLORS = {
-    GRAY: 'gray',
-    RED: 'red',
-    YELLOW: 'yellow',
-    GREEN: 'green',
-    BLUE: 'blue',
-}
-
-export const LABEL_SIZES = {
-    SMALL: 'small',
-    MEDIUM: 'medium',
-    LARGE: 'large',
-}
-
-// --------------------
 // BUTTON
 // --------------------
 const BUTTON_VARIANTS = {
@@ -27,11 +10,11 @@ const BUTTON_VARIANTS = {
 }
 
 const BUTTON_STATES = {
-    NORMAL: "-normal",
-    HOVER: "-hover",
-    ACTIVE: "-active",
-    DISABLED: "-disabled",
-    FOCUS: "-focus",
+    NORMAL: "normal",
+    HOVER: "hover",
+    ACTIVE: "active",
+    DISABLED: "disabled",
+    FOCUS: "focus",
 }
 
 const BUTTON_SIZES = {
@@ -49,10 +32,29 @@ const ICONS = {
 
 }
 
+// --------------------
+// BADGE
+// --------------------
+const BADGE_COLORS = {
+    GRAY: 'gray',
+    RED: 'red',
+    YELLOW: 'yellow',
+    GREEN: 'green',
+    BLUE: 'blue',
+}
+
+const BADGE_SIZES = {
+    SMALL: 'small',
+    MEDIUM: 'medium',
+    LARGE: 'large',
+}
+
 export {
     BUTTON_VARIANTS,
     BUTTON_STATES,
     BUTTON_SIZES,
-    ICONS
+    ICONS,
+
+    BADGE_COLORS,
+    BADGE_SIZES,
 }
-// --------------------

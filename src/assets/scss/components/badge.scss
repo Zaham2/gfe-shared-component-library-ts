@@ -1,0 +1,50 @@
+@use '../shared/colors.scss' as *;
+
+.badge {
+    display: flex;
+    border-radius: 16px;
+    padding: 0px 8px;
+    font-size: 12px;
+    justify-content: center;
+    width: 60px;
+    align-items: center;
+    background-color: $lightblue;
+
+    &.badge-gray {
+        background-color: $lightgray;
+        color: $gray;
+        border: solid 1px $gray;
+    }
+    &.badge-red {
+        background-color: $lightred;
+        color: $red;
+        border: solid 1px $red;
+    }
+    &.badge-yellow {
+        background-color: $lightyellow;
+        color: $yellow;
+        border: solid 1px $yellow;
+    }
+    &.badge-green {
+        background-color: $lightgreen;
+        color: $green;
+        border: solid 1px $green;
+    }
+    &.badge-blue {
+        background-color: $lightblue;
+        color: $blue;
+        border: solid 1px $blue;
+    }
+
+    &.badge-small {
+        height: 16px;
+    }
+    
+    &.badge-medium {
+        height: 20px;
+    }
+    
+    &.badge-large {
+        height: 24px;
+    }
+}
