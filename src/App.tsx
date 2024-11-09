@@ -1,5 +1,5 @@
-import Badge from "./components/badge-component/Badge"
-import Button from "./components/button-component/Button"
+import Badge from "./components/Badge"
+import Button from "./components/Button"
 import * as constants from "./lib/constants"
 import "./index.scss"
 

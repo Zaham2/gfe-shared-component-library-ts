@@ -4,7 +4,7 @@ import {
   BUTTON_STATES,
   BUTTON_VARIANTS,
   ICONS,
-} from "../../lib/constants";
+} from "../lib/constants";
 
 interface Props {
   variant?: string;

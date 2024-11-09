@@ -1,5 +1,5 @@
 import React from "react";
-import { BADGE_COLORS, BADGE_SIZES } from "../../lib/constants";
+import { BADGE_COLORS, BADGE_SIZES } from "../lib/constants";
 
 interface Props {
     size?: string;
