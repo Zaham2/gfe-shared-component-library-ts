@@ -1,12 +1,14 @@
 import "./index.scss"
-import Navbar from "./components/Navbar"
+import TextInput from "./components/TextInput"
+import { TEXT_INPUT_TYPES } from "./lib/constants"
 
 function App() {
 
   return (
     <>
-      <Navbar items={["Home", "Features", "Pricing", "About us", "Contact"]} />
-    </>
+      <TextInput hint="Enter email address" inputType={TEXT_INPUT_TYPES.EMAIL} label="some label" placeholder="some text" />
+      <TextInput hint="Enter password" inputType={TEXT_INPUT_TYPES.PASSWORD} label="some label" placeholder="some text" />
+      </>
   )
 }
 

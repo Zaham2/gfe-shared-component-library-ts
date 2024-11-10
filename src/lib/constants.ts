@@ -48,6 +48,20 @@ const BADGE_SIZES = {
     MEDIUM: 'medium',
     LARGE: 'large',
 }
+// --------------------
+// TEXT INPUT
+// --------------------
+
+const TEXT_INPUT_TYPES = {
+    TEXT: 'text',
+    EMAIL: 'email',
+    PASSWORD: 'password',
+}
+
+const TEXT_INPUT_INVALID_TEXT = {
+    EMAIL: 'Please enter a valid email address',
+    PASSWORD: 'Please enter a valid password of at least 8 characters',
+}
 
 export {
     BUTTON_VARIANTS,
@@ -57,4 +71,7 @@ export {
 
     BADGE_COLORS,
     BADGE_SIZES,
+
+    TEXT_INPUT_TYPES,
+    TEXT_INPUT_INVALID_TEXT,
 }
