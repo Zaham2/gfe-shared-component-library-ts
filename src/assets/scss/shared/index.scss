@@ -1,1 +1,106 @@
+/**
+ * Note: I know this is not optimal, this project is simply a proof of concept to better learn how to manage css across a mid-sized project
+ */
+
+@use './colors.scss' as *;
+@use './sizes.scss' as *;
+@use './breakpoints.scss' as *;
+@use './themes.scss' as *;
+
 @forward './colors.scss';
+@forward './themes.scss';
+
+@mixin container($breakpoint) {
+    @if $breakpoint == 'mobile' {
+        @content;
+    }
+    @else if $breakpoint == 'tablet' {
+        @content;
+    }
+    @else if $breakpoint == 'desktop' {
+        @content;
+    }
+}
+
+@mixin theme($theme) {
+    background-color: map-get($theme, background-color);
+    color: map-get($theme, text-color);
+}
+
+@each $themeName, $themeValue in $themes {
+    .#{"" + $themeName} {
+        @include theme($themeValue);
+    }
+}
+
+@each $colorName, $colorCode in $colors {
+    .bg-#{"" + $colorName} {
+        background-color: $colorCode;
+    }
+
+    .text-#{"" + $colorName} {
+        color: $colorCode;
+    }
+}
+
+@each $sizeName, $sizeValue in $sizes {
+    .font-size-#{$sizeName} {
+        font-size: $sizeValue;
+    }
+
+    .padding-#{$sizeName} {
+        padding: $sizeValue;
+    }
+
+    .margin-#{$sizeName} {
+        margin: $sizeValue;
+    }
+}
+
+@each $spacingName, $spacingValue in $spacing {
+    .p-#{$spacingName} {
+        padding: $spacingValue;
+    }
+
+    .p-left-#{$spacingName} {
+        padding-left: $spacingValue;
+    }
+
+    .p-right-#{$spacingName} {
+        padding-right: $spacingValue;
+    }
+
+    .p-top-#{$spacingName} {
+        padding-top: $spacingValue;
+    }
+
+    .p-bottom-#{$spacingName} {
+        padding-bottom: $spacingValue;
+    }
+
+    .m-#{$spacingName} {
+        margin: $spacingValue;
+    }
+
+    .m-left-#{$spacingName} {
+        margin-left: $spacingValue;
+    }
+
+    .m-right-#{$spacingName} {
+        margin-right: $spacingValue;
+    }
+
+    .m-top-#{$spacingName} {
+        margin-top: $spacingValue;
+    }
+
+    .m-bottom-#{$spacingName} {
+        margin-bottom: $spacingValue;
+    }
+}
+
+@each $lineHeightName, $lineHeightValue in $lineHeights {
+    .line-height-#{$lineHeightName} {
+        line-height: $lineHeightValue;
+    }
+}

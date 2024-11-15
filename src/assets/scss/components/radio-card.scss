@@ -1,0 +1,31 @@
+@use '../shared/index.scss' as *;
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 12px;
+    gap: 8px;
+    justify-content: flex-start;
+    width: fit-content;
+}
+
+.radio-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // padding: 8px;
+    border-radius: 4px;
+    width: auto;
+    // min-width: 100px;
+    justify-content: center;
+    gap: 1em;
+    border: 1px solid $black;
+    height: 2.5em;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $lightgray;
+
+    }
+}

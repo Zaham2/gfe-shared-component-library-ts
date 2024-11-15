@@ -1,4 +1,11 @@
 // --------------------
+// THEMES
+// --------------------
+const THEMES = {
+    LIGHT: "light",
+    DARK: "dark",
+}
+// --------------------
 // BUTTON
 // --------------------
 const BUTTON_VARIANTS = {
@@ -63,7 +70,26 @@ const TEXT_INPUT_INVALID_TEXT = {
     PASSWORD: 'Please enter a valid password of at least 8 characters',
 }
 
+// ------------
+// Radio Card
+// ------------
+const RADIO_ICON_POSITIONS = {
+    LEFT: 'left',
+    RIGHT: 'right',
+    NONE: 'none',
+}
+
+const RADIO_ICON_TYPES = {
+    MONTHLY: 'monthly',
+    WEEKLY: 'weekly',
+    ANNUALLY: 'annually',
+    NONE: 'none',
+}
+
 export {
+
+    THEMES,
+
     BUTTON_VARIANTS,
     BUTTON_STATES,
     BUTTON_SIZES,
@@ -74,4 +100,7 @@ export {
 
     TEXT_INPUT_TYPES,
     TEXT_INPUT_INVALID_TEXT,
+
+    RADIO_ICON_POSITIONS,
+    RADIO_ICON_TYPES,
 }

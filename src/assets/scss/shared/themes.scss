@@ -1,0 +1,15 @@
+@use './colors.scss' as *;
+
+$light: (
+    background-color: $white,
+    text-color: $black,
+);
+$dark: (
+    background-color: $gray,
+    text-color: $white,
+    );
+
+$themes: (
+    light: $light,
+    dark: $dark
+)
