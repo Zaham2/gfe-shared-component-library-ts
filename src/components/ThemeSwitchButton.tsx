@@ -4,7 +4,7 @@ import { THEMES } from '../lib/constants'
 
 const ThemeSwitchButton = () => {
 
-    const [currentTheme, setCurrentTheme] = React.useState<string | null>(null)
+    const [currentTheme, setCurrentTheme] = React.useState<string | null>(THEMES.LIGHT)
     const { theme, toggleTheme } = React.useContext(ThemeContext)
 
     React.useEffect(() => {
@@ -21,7 +21,7 @@ const ThemeSwitchButton = () => {
     }
 
   return (
-    <button onClick={() => handleThemeChange(theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT)}>
+    <button className='theme-switch-button' onClick={() => handleThemeChange(theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT)}>
       Toggle Theme
     </button>
   )

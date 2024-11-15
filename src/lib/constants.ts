@@ -5,6 +5,7 @@ const THEMES = {
     LIGHT: "light",
     DARK: "dark",
 }
+
 // --------------------
 // BUTTON
 // --------------------
@@ -86,6 +87,14 @@ const RADIO_ICON_TYPES = {
     NONE: 'none',
 }
 
+const RADIO_CARD_STATES = {
+    NORMAL: "normal",
+    HOVER: "hover",
+    SELECTED: "selected",
+    DISABLED: "disabled",
+    FOCUS: "focus",
+}
+
 export {
 
     THEMES,
@@ -101,6 +110,7 @@ export {
     TEXT_INPUT_TYPES,
     TEXT_INPUT_INVALID_TEXT,
 
+    RADIO_CARD_STATES,
     RADIO_ICON_POSITIONS,
     RADIO_ICON_TYPES,
 }

@@ -9,16 +9,22 @@
 
 @forward './colors.scss';
 @forward './themes.scss';
+@forward './sizes.scss';
+@forward './breakpoints.scss';
 
-@mixin container($breakpoint) {
-    @if $breakpoint == 'mobile' {
-        @content;
+@mixin responsive($breakpoint) {
+
+    @if $breakpoint ==$tablet {
+        @media screen and (min-width: #{$breakpoint}) {
+            @content;
+        }
     }
-    @else if $breakpoint == 'tablet' {
-        @content;
-    }
-    @else if $breakpoint == 'desktop' {
-        @content;
+
+    @else if $breakpoint ==$desktop {
+        @media screen and (min-width: #{$breakpoint}) {
+            @content;
+        }
+
     }
 }
 

@@ -8,7 +8,8 @@ interface Props {
 
 const ThemeProvider = (props: Props) => {
 
-  const [theme, setTheme] = React.useState(THEMES.DARK)
+  const [theme, setTheme] = React.useState(THEMES.LIGHT)
+
 
   const toggleTheme = (newTheme: string) => {
     setTheme(newTheme)
