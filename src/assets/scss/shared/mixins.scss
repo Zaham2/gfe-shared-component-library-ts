@@ -1,0 +1,47 @@
+@use './breakpoints.scss' as *;
+@use './typography.scss' as *;
+@use './states.scss' as *;
+@use './colors.scss' as *;
+@use 'sass:list';
+@use 'sass:map';
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==$tablet {
+        @media screen and (min-width: #{$breakpoint}) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==$desktop {
+        @media screen and (min-width: #{$breakpoint}) {
+            @content;
+        }
+
+    }
+}
+
+@mixin generate-general-size-class {
+    @each $size, $values in $sizes-lh-spacing {
+        .size-#{$size} {
+            font-size: list.nth($values, 1);
+            line-height: list.nth($values, 2);
+            margin: list.nth($values, 3);
+            padding: list.nth($values, 3);
+        }
+    }
+}
+
+@mixin theme($theme) {
+    background-color: map.get($theme, background-color);
+    color: map.get($theme, text-color);
+}
+
+@mixin generate-default-states {
+    @each $state, $styles in $states {
+        .#{$state} {
+            @each $style, $value in $styles {
+                #{$style}: $value;
+            }
+        }
+    }
+}

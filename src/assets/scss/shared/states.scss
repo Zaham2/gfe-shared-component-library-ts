@@ -1,0 +1,50 @@
+@use './colors.scss' as *;
+
+$normal: (
+    background-color: $white,
+    color: $black,
+    border: 1px solid $black,
+);
+$hover: (
+    background-color: $lightgray,
+    color: $black,
+    border: 1px solid $black,
+    border-shadow: 0px 1px 1px 1px $black
+);
+$active: (
+    background-color: $white,
+    color: $black,
+    border: 3px solid $gray
+);
+$disabled: (
+    background-color: $lightgray,
+    color: $gray,
+    border: 1px solid $gray
+);
+$focus: (
+    background-color: $red,
+    color: $black,
+    border: 1px solid $black
+);
+$selected: (
+    background-color: $indigo,
+    color: $white
+);
+$initial: (
+    background-color: $white,
+    color: $black
+);
+
+$states: (
+    'normal': $normal,
+    'hover': $hover,
+    'active': $active,
+    'disables': $disabled,
+    'focus': $focus,
+    'selected': $selected,
+    'initial': $initial
+);
+
+@function generate-state-class($state, $styles) {
+    @each $key, $value in $styles {}
+}

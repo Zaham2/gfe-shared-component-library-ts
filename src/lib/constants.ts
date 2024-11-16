@@ -95,6 +95,21 @@ const RADIO_CARD_STATES = {
     FOCUS: "focus",
 }
 
+// -----------
+// Tab Menu
+// -----------
+export const TAB_MENU_STATES = {
+    INITIAL: 'initial',
+    HOVER: 'hover',
+    FOCUS: 'focus',
+    DISABLED: 'disabled',
+}
+
+export const TAB_MENU_SIZES = {
+    SMALL: 'sm',
+    MEDIUM: 'md'
+}
+
 export {
 
     THEMES,

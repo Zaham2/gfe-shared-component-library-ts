@@ -3,3 +3,6 @@
 
 @forward './shared/index.scss';
 @forward './components/index.scss';
+
+@include generate-general-size-class;
+@include generate-default-states;

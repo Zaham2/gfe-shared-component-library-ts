@@ -3,35 +3,20 @@
  */
 
 @use './colors.scss' as *;
-@use './sizes.scss' as *;
+@use './typography.scss' as *;
 @use './breakpoints.scss' as *;
 @use './themes.scss' as *;
+@use './states.scss' as *;
+@use './mixins.scss' as *;
+@use 'sass:list';
+@use 'sass:map';
 
 @forward './colors.scss';
 @forward './themes.scss';
-@forward './sizes.scss';
+@forward './typography.scss';
 @forward './breakpoints.scss';
-
-@mixin responsive($breakpoint) {
-
-    @if $breakpoint ==$tablet {
-        @media screen and (min-width: #{$breakpoint}) {
-            @content;
-        }
-    }
-
-    @else if $breakpoint ==$desktop {
-        @media screen and (min-width: #{$breakpoint}) {
-            @content;
-        }
-
-    }
-}
-
-@mixin theme($theme) {
-    background-color: map-get($theme, background-color);
-    color: map-get($theme, text-color);
-}
+@forward './states.scss';
+@forward './mixins.scss';
 
 @each $themeName, $themeValue in $themes {
     .#{"" + $themeName} {
@@ -46,67 +31,5 @@
 
     .text-#{"" + $colorName} {
         color: $colorCode;
-    }
-}
-
-@each $sizeName, $sizeValue in $sizes {
-    .font-size-#{$sizeName} {
-        font-size: $sizeValue;
-    }
-
-    .padding-#{$sizeName} {
-        padding: $sizeValue;
-    }
-
-    .margin-#{$sizeName} {
-        margin: $sizeValue;
-    }
-}
-
-@each $spacingName, $spacingValue in $spacing {
-    .p-#{$spacingName} {
-        padding: $spacingValue;
-    }
-
-    .p-left-#{$spacingName} {
-        padding-left: $spacingValue;
-    }
-
-    .p-right-#{$spacingName} {
-        padding-right: $spacingValue;
-    }
-
-    .p-top-#{$spacingName} {
-        padding-top: $spacingValue;
-    }
-
-    .p-bottom-#{$spacingName} {
-        padding-bottom: $spacingValue;
-    }
-
-    .m-#{$spacingName} {
-        margin: $spacingValue;
-    }
-
-    .m-left-#{$spacingName} {
-        margin-left: $spacingValue;
-    }
-
-    .m-right-#{$spacingName} {
-        margin-right: $spacingValue;
-    }
-
-    .m-top-#{$spacingName} {
-        margin-top: $spacingValue;
-    }
-
-    .m-bottom-#{$spacingName} {
-        margin-bottom: $spacingValue;
-    }
-}
-
-@each $lineHeightName, $lineHeightValue in $lineHeights {
-    .line-height-#{$lineHeightName} {
-        line-height: $lineHeightValue;
     }
 }
