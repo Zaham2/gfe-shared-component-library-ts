@@ -32,13 +32,15 @@ const TabMenu = (props: Props) => {
     }
 
     const handleMouseEnter = (index: number) => {
-        if (tabButtonStates[index] === TAB_MENU_STATES.FOCUS || 
+        if (tabButtonStates[index] === TAB_MENU_STATES.FOCUS ||
             tabButtonStates[index] === TAB_MENU_STATES.DISABLED
         ) {
             return
         }
 
-        if(tabButtonStates[index] === TAB_MENU_STATES.INITIAL) {
+        if (tabButtonStates[index] === TAB_MENU_STATES.INITIAL && 
+            !tabButtonStates.includes(TAB_MENU_STATES.HOVER)
+        ) {
             const newTabButtonStates = [...tabButtonStates];
             newTabButtonStates[index] = TAB_MENU_STATES.HOVER;
             setTabButtonStates(newTabButtonStates);
@@ -46,12 +48,13 @@ const TabMenu = (props: Props) => {
     }
 
     const handleMouseLeave = (index: number) => {
-        if(tabButtonStates[index] === TAB_MENU_STATES.FOCUS) {
+        if (tabButtonStates[index] === TAB_MENU_STATES.FOCUS) {
             return
+        } else if (tabButtonStates[index] === TAB_MENU_STATES.HOVER) {
+            const newTabButtonStates = [...tabButtonStates];
+            newTabButtonStates[index] = TAB_MENU_STATES.INITIAL;
+            setTabButtonStates(newTabButtonStates);
         }
-        const newTabButtonStates = [...tabButtonStates];
-        newTabButtonStates[index] = TAB_MENU_STATES.INITIAL;
-        setTabButtonStates(newTabButtonStates);
     }
 
     return (
