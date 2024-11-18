@@ -110,6 +110,12 @@ export const TAB_MENU_SIZES = {
     MEDIUM: 'md'
 }
 
+export const TABS_COMPONENT_STATES = {
+    INITIAL: 'initial',
+    HOVER: 'hover',
+    FOCUS: 'focus',
+}
+
 export {
 
     THEMES,

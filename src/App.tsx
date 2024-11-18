@@ -1,4 +1,4 @@
-import TabMenu from "./components/TabMenu"
+import TabsComponent from "./components/TabsComponent"
 import "./index.scss"
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       width: '100%',
       height: '100vh'
     }}>
-      <TabMenu tabs={["Account", "Security", "Plan"]} />
+      <TabsComponent tabs={['Account', 'Security', 'Plan']} />
     </div>
   )
 }
