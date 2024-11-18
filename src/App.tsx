@@ -1,5 +1,6 @@
-import TabsComponent from "./components/TabsComponent"
+import Toggle from "./components/Toggle"
 import "./index.scss"
+import { TOGGLE_SIZES, TOGGLE_STATES } from "./lib/constants"
 
 function App() {
 
@@ -11,8 +12,10 @@ function App() {
       width: '100%',
       height: '100vh'
     }}>
-      <TabsComponent tabs={['Account', 'Security', 'Plan']} />
-    </div>
+      <Toggle initialState={TOGGLE_STATES.INITIAL} size={TOGGLE_SIZES.MEDIUM} />
+      <Toggle initialState={TOGGLE_STATES.FOCUS} size={TOGGLE_SIZES.MEDIUM} />
+      <Toggle initialState={TOGGLE_STATES.DISABLED} />
+      </div>
   )
 }
 

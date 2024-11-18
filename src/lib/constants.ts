@@ -116,6 +116,18 @@ export const TABS_COMPONENT_STATES = {
     FOCUS: 'focus',
 }
 
+export const TOGGLE_SIZES = {
+    SMALL: 'sm',
+    MEDIUM: 'md',
+    
+}
+
+export const TOGGLE_STATES = {
+    INITIAL: 'initial',
+    FOCUS: 'focus',
+    DISABLED: 'disabled',
+}
+
 export {
 
     THEMES,

@@ -30,11 +30,11 @@ const RadioCard = (props: Props) => {
     const handleIconType = () => {
         switch (props.iconType) {
             case RADIO_ICON_TYPES.MONTHLY:
-                return <RiCalendarTodoLine className='radio-card-icon font-size-2xl' />;
+                return <RiCalendarTodoLine className='radio-card-icon font-size-xl-2' />;
             case RADIO_ICON_TYPES.WEEKLY:
-                return <RiCalendarEventFill className='radio-card-icon font-size-2xl' />;
+                return <RiCalendarEventFill className='radio-card-icon font-size-xl-2' />;
             case RADIO_ICON_TYPES.ANNUALLY:
-                return <RiCalendar2Line className='radio-card-icon font-size-2xl' />;
+                return <RiCalendar2Line className='radio-card-icon font-size-xl-2' />;
             default:
                 return null;
         }
@@ -77,7 +77,7 @@ const RadioCard = (props: Props) => {
             >
                 {isLeftIcon && handleIconType()}
                 {shouldShowText && <p className="font-size-md radio-card-text">{radioCardText}</p>}
-                {showArrow && iconPosition !== RADIO_ICON_POSITIONS.RIGHT && <RiArrowDropDownLine className='radio-card-icon font-size-2xl' />}
+                {showArrow && iconPosition !== RADIO_ICON_POSITIONS.RIGHT && <RiArrowDropDownLine className='radio-card-icon font-size-xl-2' />}
                 {isRightIcon && handleIconType()}
             </button>
         </div>
