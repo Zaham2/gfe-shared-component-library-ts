@@ -33,3 +33,6 @@
         color: $colorCode;
     }
 }
+
+@include generate-general-size-class;
+@include generate-default-states;

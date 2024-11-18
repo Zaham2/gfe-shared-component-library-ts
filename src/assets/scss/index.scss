@@ -1,8 +1,2 @@
-@use './shared/index.scss' as *;
-@use './components/index.scss' as *;
-
 @forward './shared/index.scss';
 @forward './components/index.scss';
-
-@include generate-general-size-class;
-@include generate-default-states;
