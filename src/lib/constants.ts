@@ -142,6 +142,13 @@ export const TOOLTIP_ALIGNMENTS = {
     NONE: 'none',
 }
 
+export const CHECKBOX_STATES = {
+    UNCHECKED: 'unchecked',
+    CHECKED: 'checked',
+    INDETERMINATE: 'indeterminate',
+    DISABLED: 'disabled',
+}
+
 export {
 
     THEMES,

@@ -1,0 +1,37 @@
+@use '../shared/index.scss' as *;
+
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    &.disabled {
+        border: none;
+        background-color: $white;
+        color: $gray;
+        pointer-events: none;
+    }
+}
+
+.checkbox-label {
+    font-size: large;
+
+}
+
+.checkbox-input {
+    width: 1.2em;
+    height: 1.2em;
+    accent-color: $indigo;
+}
+
+.checkbox-input.indeterminate::after {
+    content: "-";
+    font-weight: 700;
+    color: $white;
+    background-color: $indigo;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+
+}
