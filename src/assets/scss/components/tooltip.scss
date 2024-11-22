@@ -1,0 +1,86 @@
+@use '../shared/index.scss' as *;
+
+.tooltip-container {
+    display: inline-flex;
+    border: 2px solid $red;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+.tip {
+    position: absolute;
+    text-wrap: nowrap;
+    z-index: 1;
+    border-radius: 8px;
+    background-color: $black;
+    color: $white;
+
+    .tip-arrow {
+        content: "";
+        position: absolute;
+        border-width: 8px;
+        border-style: solid;
+    }
+
+    &.top {
+        top: -100%;
+
+        .tip-arrow {
+            border-color: $black transparent transparent transparent;
+            transform: translateX(-50%);
+            left: 50%;
+            top: 100%;
+        }
+
+        .start {
+            left: 20%;
+        }
+
+        .end {
+            left: 80%;
+        }
+    }
+
+    &.bottom {
+        bottom: -100%;
+
+        .tip-arrow {
+            border-color: transparent transparent $black transparent;
+            transform: translateX(-50%);
+            // left: 50%;
+            bottom: 100%;
+        }
+
+        .start {
+            left: 20%;
+        }
+
+        .end {
+            right: 20%
+        }
+    }
+
+    &.left {
+        left: -200%;
+
+        .tip-arrow {
+            border-color: transparent transparent transparent $black;
+            left: 100%;
+        }
+    }
+
+    &.right {
+        right: -200%;
+
+        .tip-arrow {
+            border-color: transparent $black transparent transparent;
+            right: 100%;
+        }
+    }
+}
+
+.tip.hidden {
+    visibility: hidden;
+}

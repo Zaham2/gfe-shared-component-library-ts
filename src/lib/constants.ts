@@ -128,6 +128,20 @@ export const TOGGLE_STATES = {
     DISABLED: 'disabled',
 }
 
+export const TOOLTIP_POSITIONS = {
+    TOP: 'top',
+    BOTTOM: 'bottom',
+    LEFT: 'left',
+    RIGHT: 'right',
+}
+
+export const TOOLTIP_ALIGNMENTS = {
+    START: 'start',
+    CENTER: 'center',
+    END: 'end',
+    NONE: 'none',
+}
+
 export {
 
     THEMES,
