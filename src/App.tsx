@@ -1,4 +1,4 @@
-import Checkbox from "./components/Checkbox"
+import Pagination from "./components/Pagination"
 import "./index.scss"
 
 function App() {
@@ -10,11 +10,13 @@ function App() {
       alignItems: 'center',
       width: '100%',
       height: '100vh',
+      flexDirection: 'column',
+      gap: '20px'
     }}>
-      <Checkbox boxState="disabled" />
-      <Checkbox boxState="checked"/>
-      <Checkbox boxState="indeterminate"/>
-      <Checkbox boxState="unchecked"/>
+      <Pagination numberOfPages={3} />
+      <Pagination numberOfPages={5}/>
+      <Pagination numberOfPages={9}/>
+      <Pagination numberOfPages={19}/>
       </div>
   )
 }

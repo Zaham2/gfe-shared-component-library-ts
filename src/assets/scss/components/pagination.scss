@@ -1,0 +1,17 @@
+@use '../shared/index.scss' as *;
+
+// .pagination-next-button, .pagination-prev-button {
+//     display: flex;
+// }
+
+.pagination-buttons-container {
+    display: flex;
+    gap: 8px;
+}
+
+.pagination-page-numbers-container {
+    display: flex;
+    gap: 8px;
+    max-width: 200px;
+    overflow-x:auto;
+}
