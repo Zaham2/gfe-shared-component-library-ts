@@ -1,0 +1,67 @@
+@use '../shared/index.scss' as *;
+
+.dropdown-menu-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    top:100%;
+}
+
+.dropdown-menu {
+    width: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    list-style: none;
+    z-index: 1;
+    background-color: $white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.dropdown-option {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+
+    &.initial {
+        background-color: $white;
+        color: $black;
+    }
+
+    &.selected {
+        background-color: $lightgray;
+        color: $black;
+    }
+
+    &.disabled {
+        background-color: $lightgray;
+        color: $gray;
+        pointer-events: none;
+    }
+
+    &.hover {
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+}
+
+.selected-dropdown-item-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    background-color: $white;
+    color: $black;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    width: 150px;
+}
+
+.hidden {
+    display: none;
+}

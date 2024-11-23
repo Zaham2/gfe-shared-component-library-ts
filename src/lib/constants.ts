@@ -149,6 +149,14 @@ export const CHECKBOX_STATES = {
     DISABLED: 'disabled',
 }
 
+export const DROPDOWN_MENU_STATES = {
+    INITIAL: 'initial',
+    HOVER: 'hover',
+    FOCUS: 'focus',
+    DISABLED: 'disabled',
+    SELECTED: 'selected',
+}
+
 export {
 
     THEMES,
