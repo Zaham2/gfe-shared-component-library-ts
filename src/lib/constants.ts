@@ -157,6 +157,11 @@ export const DROPDOWN_MENU_STATES = {
     SELECTED: 'selected',
 }
 
+export const MODAL_VARIANTS = {
+    PRIMARY: 'primary',
+    DANGER: 'danger',
+}
+
 export {
 
     THEMES,

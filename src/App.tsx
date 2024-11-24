@@ -1,5 +1,4 @@
-import DropdownMenu from "./components/DropdownMenu"
-import { MdLaptopMac } from "react-icons/md";
+import ModalDialog from "./components/ModalDialog"
 import "./index.scss"
 
 function App() {
@@ -12,11 +11,8 @@ function App() {
       width: '100%',
       height: '100%',
       flexDirection: 'column',
-      gap: '16px',
-      padding: '16px'
     }}>
-      <DropdownMenu icon={<MdLaptopMac />} options={['something 1', 'someone 2', 'somewhere 3']} />
-      <DropdownMenu options={['something 1', 'someone 2', 'somewhere 3']} />
+      <ModalDialog body="sample text input" title="sample title"/>
       </div>
   )
 }
