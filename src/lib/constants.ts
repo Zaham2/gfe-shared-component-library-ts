@@ -162,6 +162,13 @@ export const MODAL_VARIANTS = {
     DANGER: 'danger',
 }
 
+export const TOAST_VARIANTS = {
+    SUCCESS: 'success',
+    ERROR: 'error',
+    WARNING: 'warning',
+    INFO: 'info',
+}
+
 export {
 
     THEMES,

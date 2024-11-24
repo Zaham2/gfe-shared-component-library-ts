@@ -1,5 +1,6 @@
-import ModalDialog from "./components/ModalDialog"
+import Toast from "./components/Toast"
 import "./index.scss"
+import { TOAST_VARIANTS } from "./lib/constants"
 
 function App() {
 
@@ -12,7 +13,10 @@ function App() {
       height: '100%',
       flexDirection: 'column',
     }}>
-      <ModalDialog body="sample text input" title="sample title"/>
+      <Toast state={TOAST_VARIANTS.SUCCESS} message={"Your content successfully added"} />
+      <Toast state={TOAST_VARIANTS.INFO} message="Your content is publicly visible" />
+      <Toast state={TOAST_VARIANTS.ERROR} message="Your content successfully deleted"/>
+      <Toast state={TOAST_VARIANTS.WARNING} message="Your image is 5Mb, it may laod longer!"/>
       </div>
   )
 }
